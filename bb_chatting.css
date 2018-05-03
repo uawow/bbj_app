@@ -1,0 +1,227 @@
+html {background:#fff;}
+.my_mt_45 {margin-top:45px;}
+.my_pt_31 {padding-top:31px;}
+.my_pt_11 {padding-top:11px;}
+.my_pt_5 {padding-top:5px;}
+.my_pb_16 {padding-bottom:16px;}
+input{outline:none;}
+#wrap {position:relative; top:0; left:0; right:0; width:100%; height:auto; overflow-y:hidden;}
+.text_b{font-weight:600;}
+
+/* 체크박스 크기 조절 170728_주철만 */
+/* 기본 체크박스(하얀배경 > 파란배경 하얀체크) */
+.chk_wrap03 {position:relative;}
+.chk_wrap03 .chk_input03 {display:block; position:absolute; z-index:1; top:0; left:0; width:100%; height:100%; opacity:0; cursor:pointer;}
+.chk_wrap03 .chk_lb03 {display:block; position:relative; width:auto; height:22px; padding-left:20px; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_chk03_off.png) no-repeat left center; background-size:22px 22px; line-height:15px; vertical-align:middle;}
+.chk_wrap03 .chk_input03:checked ~ .chk_lb03 {background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_chk03_on.png) no-repeat left center; background-size:22px 22px;}
+
+/* 상단 결과 - 리스트 분류시 @등록중인 매물, 최근 본 매물 or 관심매물 */
+.result-sorting_wrap {position:fixed; z-index:850; top:0; width:100%; height:30px; padding-top:0; border-bottom:1px solid #c9c9c9; background-color:#f5f5f5;}
+.result-sorting_wrap:after {display:block; clear:both; content:"";}
+
+.result-sorting_wrap .result_container {position:relative; float:right; width:auto; height:100%;}
+.result-sorting_wrap .result_container:after {display:block; clear:both; content:"";}
+.result-sorting_wrap .result_container div {position:relative; float:left;}
+.result-sorting_wrap .result_container .result_txt {width:auto; height:100%; margin-right:10px; line-height:30px;}
+
+.result-sorting_wrap .chk-in-result {display:inline-block; position:absolute; top:4px; left:10px;} /* 최근본매물 체크위치변경 */
+.result-sorting_wrap button.del {position:absolute; top:4px; left:44px; width:56px; height:21px; padding:0; border:0; border-radius:2px; outline:0; background:#4e5254; color:#fefefe; font-size:13px; letter-spacing:0;line-height:21px;-webkit-border-radius:2px; -o-border-radius:2px; -moz-border-radius:2px; -ms-border-radius:2px;}
+
+/****************************170817 정우아*****************************/
+/**개별대화함**/
+.pd_50{padding-bottom:40px;}
+.full_page_msg{width:100%; box-sizing:border-box;}
+
+#header .btn_back {position:absolute; z-index:1; top:0; left:0; width:40px; height:100%;}
+#header .btn_back a {display:block; width:100%; height:100%; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_back.png) no-repeat center center; background-size:17px 14px; text-indent:-9999px;}
+#header .btn_back a:active {background:rgba(0,0,0,0.05) url(http://image.bbjang.com/imgs/bbjang/img01/btn_back.png) no-repeat center center; background-size:17px 14px;}
+
+#header .header_txt, #header .header_txt_g{position:relative; width:100%; height:100%; padding-left:45px; font-size:19px; line-height:45px; box-sizing:border-box; font-weight:600;}
+#header .header_txt{color:#fff;}
+#header .header_txt_g{color:#4d5356;}
+.bg_white {background-color:#fff;}
+#header .btn_report_msg {position:absolute; top:0; right:0; width:50px; height:100%;}
+#header .btn_report_msg a {display:inline-block; position:absolute; top:6px; right:6px; padding:8px; border:1px solid #ccc; font-size:14px;}
+#header .btn_report_msg a:active {background:rgba(0,0,0,.1);}
+
+#container .msg_btn_wrap {width:100%; max-height:34px; background:#0b9de6; border-bottom:1px solid #0972ab;}
+#container .msg_btn_wrap:after{content:""; display:block; clear:both;}
+#container .msg_btn_wrap ul li {float:left; max-height:34px; margin:0; padding:0 11px; border-right:1px solid #30a5e0; color:#fff; font-size:16px; text-align:center; letter-spacing:-1px; line-height:34px;}
+#container .msg_btn_wrap ul li:active {background:#30a5e0; color:#fff;}
+#container .msg_btn_wrap ul li:nth-child(3) {float:right; border-right:none; border-left:1px solid #30a5e0;}
+
+#msg_content_warp {width:100%; height:100%; overflow-y:auto; background:#fff; box-sizing:border-box;}
+#msg_content_warp .msg_day_wrap {width:95%; height:auto; margin:0 auto;}
+#msg_content_warp .msg_day_wrap .msg_day_line {display:block; margin:0 auto; margin-bottom:8px; text-align:center;}
+#msg_content_warp .msg_day_wrap .msg_day_line p {display:inline-block; padding:7px 12px; border-radius:15px; background:#5d8ea8; color:#fff; letter-spacing:-0.5px;}
+#msg_content_warp .msg_day_wrap .msg_bubble_wrap {position:relative; clear:both; width:100%; height:auto; overflow:hidden;}
+#msg_content_warp .msg_day_wrap .msg_bubble_wrap .photo_ptn {position:absolute; top:8px; left:0; width:37px; height:37px; border-radius:50%; z-index:10;}/*20170817 추가*/
+#msg_content_warp .msg_day_wrap .msg_bubble_wrap .photo_ptn img {width:40px; height:40px; border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%;}
+#msg_content_warp .msg_day_wrap .msg_bubble_wrap .talkbubble_wrap {position:relative; max-width:73%;}
+#msg_contents .msg_day_wrap .msg_bubble_wrap .talkbubble_wrap img {display:block; width:100px; height:auto; border-radius:10px;}
+
+#ptn_msg .ptn_txt_line {position:absolute; top:0px; left:42px;}
+
+#ptn_msg .ptn_txt {color:#4d5f88; font-size:13px; vertical-align:middle; padding-right:2px;}
+#ptn_msg .ptn_bubble_wrap {top:12px; left:20px; float:left; margin-bottom:25px;}
+#ptn_msg .ptn_bubble_wrap .ptn_talkbubble {position:relative; padding:8px 10px 8px 22px; border-radius:5px; background-color:#e0eff7; color:#222222; font-size:15px; line-height:19px; word-break:break-all; white-space: pre-line;}
+#ptn_msg .ptn_bubble_wrap .ptn_talk_time {display:block; position:absolute; right:-61px; bottom:2px; color:#5d6366; font-size:13px;}
+#ptn_msg .talkbubble_wrap .ptn_talkbubble .sell_ptn {display:inline-block; width:142px; height:auto; padding:2px; border:1px solid #d3d3d3; background-color:#fff;}
+#ptn_msg .talkbubble_wrap .ptn_talkbubble .sell_ptn li:nth-child(1) {display:inline-block; position:relative; width:100%; height:111px; background-color:#e8ebeb; text-align:center;}
+#ptn_msg .talkbubble_wrap .ptn_talkbubble .sell_ptn li:nth-child(2) {width:98%; padding:7px 3px; overflow:hidden; color:#0a6fb5; font-size:16px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
+#ptn_msg .talkbubble_wrap .ptn_talkbubble .sell_ptn li:nth-child(3) {width:98%; padding:0 3px; overflow:hidden; color:#1c1e1f; font-size:16px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; letter-spacing:-1;}
+#ptn_msg .talkbubble_wrap .ptn_talkbubble .sell_ptn li:nth-child(4) {width:98%; height:38px; color:#148fe5; font-size:16px; text-align:right; line-height:38px;}
+#ptn_msg .talkbubble_wrap .ptn_talkbubble .sell_ptn li:nth-child(4):active {background:rgba(0,0,0,.1);}
+
+#my_msg .my_bubble_warp {top:3px; right:0; float:right; margin-bottom:8px;}
+#my_msg .my_bubble_warp .my_talkbubble {position:relative; padding:9px 10px 9px 10px; border-radius:5px; background-color:#e3f7e0; color:#222; font-size:15px; line-height:19px; word-break:break-all;}
+#my_msg .my_bubble_warp .my_talk_time {display:block; position:absolute; left:-65px; bottom:2px; color:#5d6366; font-size:13px;}
+#my_msg .my_bubble_warp .my_talk_time:before {position:absolute; left:21px; bottom:15px; content:"안읽음"; color:#135a87;}
+
+#my_msg .my_bubble_warp .my_talkbubble .sell_ptn {display:inline-block; width:142px; height:auto; padding:2px; border:1px solid #d3d3d3; background:#fff;}
+#my_msg .my_bubble_warp .my_talkbubble .sell_ptn li:nth-child(1) {display:inline-block; position:relative; width:100%; height:111px; background-color:#e8ebeb; text-align:center;}
+#my_msg .my_bubble_warp .my_talkbubble .sell_ptn li:nth-child(2) {width:142px; padding:7px 3px; overflow:hidden; color:#0a6fb5; font-size:16px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
+#my_msg .my_bubble_warp .my_talkbubble .sell_ptn li:nth-child(3) {width:98%; padding:0 3px; overflow:hidden; color:#1c1e1f; font-size:16px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal;}
+#my_msg .my_bubble_warp .my_talkbubble .sell_ptn li:nth-child(4) {width:98%; height:38px; color:#148fe5; font-size:16px; text-align:right; line-height:38px;}
+#my_msg .my_bubble_warp .my_talkbubble .sell_ptn li:nth-child(4):active {background:rgba(0,0,0,.1);}
+.msg_img {width:100px; height:auto;}
+.user_photo {position:absolute; top:0; left:0; width:142px; height:111px;}
+.bbj_logo {position:absolute; top:38px; left:29px;}
+
+/*영상상담*/
+.call_video_on {display:inline-block; padding:8px 0 8px 37px; background:url(http://image.bbjang.com/imgs/bbjang/chatting/ico_video.png) no-repeat left center; background-size:31px 31px; color:#4d5356; font-weight:600;}
+.call_video_off {display:inline-block; padding:8px 0 8px 37px; background:url(http://image.bbjang.com/imgs/bbjang/chatting/ico_video_gray.png) no-repeat left center; background-size:31px 31px; color:#747474; font-weight:600;}
+
+/*20170817 정우아 수정*/
+/* 음성 통화 추가 170222 주철만 */
+.call_phone_on {display:inline-block; padding:8px 0 8px 37px; background:url(http://image.bbjang.com/imgs/bbjang/chatting/ico_phone.png) no-repeat left center; background-size:31px 31px; color:#4d5356; font-weight:600;}
+.call_phone_off {display:inline-block; padding:8px 0 8px 37px; background:url(http://image.bbjang.com/imgs/bbjang/chatting/ico_phone_gray.png) no-repeat left center; background-size:31px 31px; color:#747474; font-weight:600;}
+
+/* 메시지 입력창 */
+.msg_input_wrap {position:fixed; z-index:999; bottom:0px; width:100%; height:40px; background:#fff;}
+.msg_input_wrap .msg_bar {display:block; width:100%; height:100%; margin:0 auto; border-top:1px solid #cbcbcb;}
+.msg_input_wrap .msg_bar .msg_text_box {width:100%; height:100%; background:#fff;}
+.msg_input_wrap .msg_bar .msg_text_box li {float:left;}
+.msg_input_wrap .msg_bar .msg_text_box li:nth-child(1), .msg_input_wrap .msg_bar .msg_text_box li:nth-child(2){width:40px; height:40px;}
+.msg_input_wrap .msg_bar .msg_text_box li:nth-child(3) {width:58%;}
+.msg_input_wrap .msg_bar .msg_text_box li:nth-child(4) {float:right; width:53px;}
+.msg_input_wrap .msg_bar .msg_text_box li:nth-child(4) a:active {background:#099ce6;}
+.msg_input_wrap .msg_bar .btn_camera, .msg_bar .btn_more{display:block; height:40px; border-right:1px solid #e8e8e8; background:#f5f5f5;}
+.msg_input_wrap .msg_bar .btn_camera img{display:block; padding:11px 9px;}
+.msg_input_wrap .msg_bar .btn_more img{display:block; padding:12px 12px; transition:transform 0.15s; -webkit-transition:transform 0.15s; -ms-transition:transform 0.15s; -moz-transition:transform 0.15s; -o-transition:transform 0.15s;}
+.msg_input_wrap .msg_bar .btn_more .img_on{-webkit-transform:rotate(45deg); -ms-transform:rotate(45deg); -o-transform:rotate(45deg); -moz-transform:rotate(45deg);}
+.msg_input_wrap .msg_bar .textarea {width:92%; height:30px; margin:4px 8px 0 8px; border:none; border:none; outline:none; color:#292929; font-size:16px; line-height:30px;}
+.msg_input_wrap .msg_bar .btn_send {display:block; height:15px; margin:3px 4px 0 0; padding:9px 10px; border-radius:3px; background:#0aa5f2; color:#fff; font-size:15px; text-align:center; line-height:15px; letter-spacing:0;}
+@media (min-width:360px) {
+.msg_input_wrap .msg_bar .textarea {width:100%}
+}
+@media (min-width:375px) {
+.msg_input_wrap .msg_bar .textarea {width:100%}
+}
+@media (min-width:414px) {
+.msg_input_wrap .msg_bar .textarea {width:106%}
+}
+@media (min-width:768px) {
+.msg_input_wrap .msg_bar .textarea {width:125%}
+}
+@media (min-width:1600px) {
+.msg_input_wrap .msg_bar .textarea {width:138%}
+}
+.mg_top45 {margin-top:45px;}
+.mg_top83 {margin-top:83px; }
+
+/* 안읽음메시지 없을때 추가 170302 주철만 */
+#my_msg .my_bubble_warp .my_talk_time_none {display:block; position:absolute; left:-63px; bottom:2px; color:#5d6366; font-size:13px;}/*20170817 수정*/
+#my_msg .my_bubble_warp .my_talk_time_none:before {position:absolute; left:21px; bottom:15px; content:""; }
+
+/*신고버튼*/
+.btn_msg_report{display:inline-block; border:1px solid #d3d3d3; border-radius:3px; color:#686868; font-size:12px;}
+.btn_msg_report a{display:block; padding:2px 3px;}
+.btn_msg_report a:active{background-color:#efefef; border-radius:3px;}
+.btn_msg_report a img{width:9px; height:10px;}
+
+/*날짜 구분선 밑 마진*/
+#msgArea .dayline{margin-bottom:15px;}
+
+/*메시지 입력창 설명글(placeholder)*/
+.msg_text_box li input.textarea::-webkit-input-placeholder{color:#949494; font-size:15px; letter-spacing:-0.8;}
+.msg_text_box li input.textarea::-moz-input-placeholder{color:#949494; font-size:15px; letter-spacing:-0.8;}
+.msg_text_box li input.textarea::-ms-input-placeholder{color:#949494; font-size:15px; letter-spacing:-0.8;}
+.msg_text_box li input.textarea::-o-input-placeholder{color:#949494; font-size:15px; letter-spacing:-0.8;}
+
+/*메시지 안읽음 표시*/
+.ptn_none{position:absolute; left:-36px; bottom:18px; color:#7abadd; font-size:12px;}
+
+/*채팅상담 전화걸기, 문자보내기, 무료영상통화 버튼*/
+#msg_wrap .call_form{position:fixed; bottom:46px; left:0; padding:0 4px; box-sizing:border-box; z-index:11; width:100%;}
+#msg_wrap .call_form .call_form_u{background-color:#0079bf; border-radius:3px; color:#fff; font-size:14px; box-sizing:border-box; width:100%;}
+#msg_wrap .call_form .call_form_u:after{clear:both; content:''; display:block;}
+#msg_wrap .call_form .call_form_u li{float:left; border-right:1px solid #68889e; box-sizing:border-box; width:33.3%;}
+#msg_wrap .call_form .call_form_u li:last-child{border:0 none;}
+#msg_wrap .call_form .call_form_u li a{display:block; padding:10px 0; text-align:center;}
+#msg_wrap .call_form .call_form_u li a:active{background-color:#0170b1; border-radius:3px;}
+#msg_wrap .call_form .call_form_u li a img{width:15px; height:13px; margin-right:3px; vertical-align:text-top;}
+
+/*채팅 메시지 말풍선간 간격조정*/
+#ptn_msg{padding-top:12px;}
+#my_msg{padding-bottom:8px;}
+
+/*개별대화함 운영자메시지 메시지안내창*/
+.msg_input_wrap .msg_bar .staff_msgbox{width:100%; height:100%; background:#fff; cursor:pointer;}
+.msg_input_wrap .msg_bar .staff_msgbox li {float:left;}
+@media(max-width:320px){
+    .msg_input_wrap .msg_bar .staff_msgbox li{font-size:13px;}
+}
+.msg_input_wrap .msg_bar .staff_msgbox li:nth-child(1){width:40px; height:40px;}
+.msg_input_wrap .msg_bar .staff_msgbox li:nth-child(2){width:100%; height:40px; padding:12px 0 12px 48px; box-sizing:border-box; font-weight:600; position:absolute;}
+.msg_input_wrap .msg_bar .staff_msgbox li:nth-child(2) span{text-decoration:underline; color:#0475b3;}
+#ptn_msg .staff_badge{position:absolute; top:43px; left:2px; z-index:11;}
+#ptn_msg .staff_badge img{width:36px; height:15px;}
+
+/*채팅대화목록 없을때*/
+.list_empty_row1 {padding-top:88px; text-align:center;}
+.list_empty_row2{padding-top:7px; color:#a1a1a1; font-size:14px; text-align:center;}
+.row3{padding:0; margin-top:18px;}
+
+/*방부장 운영자메시지 이름 표시 위치 변경*/
+#ptn_msg .s_ptn_txtline{position:absolute; top:4px; left:42px;}
+
+/*채팅대화함 페이지 헤더*/
+#header .btn_back_w{position:absolute; z-index:1; top:0; left:0; width:40px; height:100%;}
+#header .btn_back_w a{display:block; width:100%; height:100%; background:url(http://image.bbjang.com/imgs/bbjang/img01/btn_back_msg.png) no-repeat center center; background-size:17px 14px; text-indent:-9999px;}
+#header .btn_back_w a:active {background:rgba(0,0,0,0.05) url(http://image.bbjang.com/imgs/bbjang/img01/btn_back_msg.png) no-repeat center center; background-size:17px 14px;}
+
+/***************170821 정우아****************/
+/* 채팅상담 리스트 */
+.day_line {width:100%; height:auto; margin:0 auto; padding:5px 0; border-bottom:1px solid #36a2eb; color:#36a2eb; text-align:center;}
+.list_card_my {position:relative; margin:0 auto; padding-left:40px; box-sizing:border-box;}/*170810 수정*/
+.list_card_my:after{display:block; clear:both; content:'';}/*170807 추가*/
+.chk-in {display:inline-block; position:absolute; top:20px; left:8px;}
+.chat_talk_wrap {position:relative; margin-left:60px;}
+.chat_talk_wrap a:after{content:""; display:block; clear:both;}/*170807 추가*/
+.chat_talk_msg {float:left; width:72%; padding-top:10px; padding-bottom:11px;}
+@media(max-width:320px){
+    .chat_talk_msg {width:67%}
+}/*170810 수정*/
+.chat_talk_msg .chat_ptn_id {color:#4d5f88; font-size:17px; font-weight:600;}
+.chat_talk_msg .chat_ptn_id_mana {color:#dbaa00; font-size:17px;}
+.chat_talk_msg .chat_ptn_msg {display:block; display:-webkit-box; width:95%; max-height:17px; padding-top:5px; overflow:hidden; color:#787d80; font-size:15px; text-overflow:ellipsis; -webkit-line-clamp:1; -webkit-box-orient:vertical;}/*170821 수정*/
+.chat_talk_msg .chat_ptn_msg_mana {display:block; display:-webkit-box; width:95%; max-height:35px; padding-top:5px; overflow:hidden; color:#004761; font-size:15px; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+.chat_talk_time {float:right; width:70px; padding:5px 0;}/*170810 수정*/
+.chat_talk_time .chat_ptn_time {color:#939393; font-size:14px;}
+.caht_msg_badge {position:absolute; top:25px; right:20px; width:24px; height:24px; border-radius:50%; background:#f33b2a; color:#fff; text-align:center; line-height:24px;}
+.content_list .profile_p{float:left; width:50px; height:auto;}
+.content_list .profile_p img{width:50px; height:50px; padding:5px 0 7px 0; border-radius:50%;}
+.line_bg{padding:0 46px 0 6px;}
+#container .dayline{margin:10px 0 8px 0;}
+
+/*20170821 정우아*/
+/*버튼 비활성화*/
+.dt_disable{background-color:#68889e; color:#95aaba;}
+.chat_ptn_msg .ico_p{display:inline-block; vertical-align:text-top; padding-left:18px; background:url(http://image.bbjang.com/imgs/bbjang/chatting/ico_p.png) no-repeat left top; background-size:15px 15px;}
+.chat_ptn_msg .ico_v{display:inline-block; vertical-align:text-top; padding-left:18px; background:url(http://image.bbjang.com/imgs/bbjang/chatting/ico_v.png) no-repeat left top; background-size:15px 15px;}
+
+/*----------비로그인시 회원가입 버튼 추가 (20171011 정우아)-----------*/
+.n_join{width:120px; margin:10px auto;}
+.n_join a{padding:7px 0; color:#fff; font-size:14px; font-weight:600; display:block; text-align:center; background-color:#0ca2ed; border-radius:5px;}
+.n_join a:active{background-color:#0d94d8; border-radius:5px;}

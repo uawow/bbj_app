@@ -1,0 +1,78 @@
+@charset "utf-8";
+html {width:100%; height:100%; margin:0; padding:0; border:0; outline:0; background:transparent; color:#111; font-size:28px; font-family:'bb-Regular'; vertical-align:baseline; letter-spacing:-0.5px;-webkit-text-size-adjust:100%; -webkit-overflow-scrolling:touch; -ms-text-size-adjust:100%;}
+body {overflow-x:hidden; width:100%; height:100%; margin:0; padding:0;}
+.font_t {font-family:"bb-Thin";}
+.font_r {font-family:"bb-Regular";}
+.font_b {font-family:"bb-Bold";}
+a {display:block; margin:0; padding:0; background:transparent; color:inherit; font-size:100%; text-decoration:none; vertical-align:baseline; cursor:pointer; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+a:link,a:hover,a:active,a:visited {display:block; margin:0; padding:0; background:transparent; color:inherit; font-size:100%; text-decoration:none; vertical-align:baseline;}
+img {border:0; -ms-interpolation-mode:bicubic;}
+ul {margin:0; padding:0;}
+ul,li {list-style:none;}
+button,input {margin:0; font-size:1em; font-family:'bb-Regular'; vertical-align:middle; appearance:none; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+input::-ms-clear {display:none;}
+button {overflow:visible; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); border:0; outline:0; text-transform:none;}
+button,html input[type="button"],input[type="submit"] {overflow:visible; vertical-align:middle; cursor:pointer; *-webkit-appearance:button;}
+button[disabled],html input[disabled] {cursor:default;}
+button::-moz-focus-inner,input::-moz-focus-inner {padding:0; border:0;}
+input {line-height:normal; outline:0;}
+#wrap {position:relative; top:0; left:0; right:0; width:100%; height:2500px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_background-view.jpg') repeat center; background-size:cover; background-attachment:fixed;}
+
+/* ON TOP */
+#on-top {position:absolute; top:0; left:0; width:100%; height:380px; animation-name:gradation; animation-duration:2s; animation-iteration-count:infinite; animation-direction:alternate; animation-timing-function:linear; background-color:#098cde;}
+@keyframes gradation {
+	from {background-color:#098cde;}
+	to {background-color:#097ad6;}
+}
+#on-top .element1 {position:relative; top:0; left:50%; width:1280px; height:380px; margin-left:-640px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_element1-on-top.png') no-repeat; background-size:1280px 380px;}
+#on-top .element1 .element2 {position:absolute; top:0; left:0; width:480px; height:314px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_element2-on-top.png') no-repeat; background-size:480px 314px;}
+#on-top .element1 .element3 {position:absolute; top:0; left:50%; width:440px; height:380px; margin-left:-220px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_element3-on-top.png') no-repeat; background-size:440px 380px;}
+
+/* KEY SPEC */
+#key-spec_wrap {position:absolute; top:380px; left:0; width:100%; margin:0; padding:0; height:auto;background-color:#fff;}
+#key-spec_wrap .key-spec_area {display:inline-block; position:relative; top:0; left:50%; width:1280px; height:1144px; margin-left:-640px; background-color:#fff;}
+#key-spec_wrap .key-spec_area .spec1 {position:absolute; top:0; left:0; width:562px; height:490px; margin:54px 0 0 46px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_keySpec1.jpg') no-repeat; background-size:562px 490px;}
+#key-spec_wrap .key-spec_area .spec2 {position:absolute; top:0; left:0; width:562px; height:490px; margin:54px 0 0 662px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_keySpec2.jpg') no-repeat; background-size:562px 490px;}
+#key-spec_wrap .key-spec_area .spec3 {position:absolute; top:0; left:0; width:562px; height:490px; margin:598px 0 0 46px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_keySpec3.jpg') no-repeat; background-size:562px 490px;}
+#key-spec_wrap .key-spec_area .spec4 {position:absolute; top:0; left:0; width:562px; height:490px; margin:598px 0 0 662px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_keySpec4.jpg') no-repeat; background-size:562px 490px;}
+#key-spec_wrap .key-spec_area .ment-in {display:block; margin-top:326px;}
+#key-spec_wrap .key-spec_area .ment-in .head-ment {margin:0 23px 0 23px; font-size:46px; color:#010101; line-height:46px; text-align:right; letter-spacing:-2px; font-style:italic;}
+#key-spec_wrap .key-spec_area .ment-in .ment {margin:18px 23px 0 23px; font-size:28px; color:#111; line-height:40px; text-align:right; letter-spacing:-1px;}
+
+/* CATCHWORD */
+#catchword_wrap {position:absolute; top:1524px; left:0; width:100%; height:auto; margin:0; padding:0;}
+#catchword_wrap .catchword_area {display:inline-block; position:relative; left:50%; width:1280px; height:210px; margin-left:-640px;}
+#catchword_wrap .catchword_area .head-catchword {display:block; position:absolute; top:0; left:50%; width:916px; margin:36px 0 0 -458px; border-bottom:2px solid #fff; font-size:60px; color:#fff; line-height:74px; text-align:center; letter-spacing:0; text-shadow:6px 6px 6px rgba(0,0,0,.75);}
+#catchword_wrap .catchword_area .head-catchword .ml26 {margin-left:26px;}
+#catchword_wrap .catchword_area .catchword {display:block; position:absolute; top:0; left:50%; width:916px; margin:138px 0 0 -458px; font-size:40px; color:#fff; line-height:40px; text-align:center; letter-spacing:-1px; text-shadow:4px 4px 4px rgba(0,0,0,.75);}
+#catchword_wrap .catchword_area .catchword .ml20 {margin-left:20px;}
+
+/* APP DOWNLOAD */
+#app-download_wrap {position:absolute; top:1734px; left:0; width:100%; height:auto; margin:0; padding:0; background-color:#eee;}
+#app-download_wrap .app-download_area {display:inline-block; position:relative; left:50%; width:1280px; height:538px; margin-left:-640px; background-color:#eee;}
+#app-download_wrap .app-download_area .mock-ups {display:inline-block; position:absolute; top:20px; left:46px; width:682px; height:494px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_mock-ups.png') no-repeat 0 0; background-size:682px 494px;}
+#app-download_wrap .app-download_area .linked1 {display:inline-block; position:absolute; top:20px; left:728px; width:464px; height:345px;}
+#app-download_wrap .app-download_area .linked1 .ment {position:absolute; width:464px; margin-top:22px; padding:0; font-size:34px; text-align:center; letter-spacing:0;line-height:34px;}
+#app-download_wrap .app-download_area .linked1 .google {position:absolute; margin-top:79px; margin-left:16px; width:432px; height:116px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_btn_linked-GooglePlay.png') no-repeat 0 0; background-size:432px 116px;}
+#app-download_wrap .app-download_area .linked1 .apple {position:absolute; margin-top:211px; margin-left:16px; width:432px; height:116px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_btn_linked-AppStore.png') no-repeat 0 0; background-size:432px 116px;}
+#app-download_wrap .app-download_area .linked2 {display:inline-block; position:absolute; top:377px; left:728px; width:464px; height:135px;}
+#app-download_wrap .app-download_area .linked2 .ment {position:absolute; width:464px; margin-top:16px; padding:0; font-size:26px; line-height:26px; letter-spacing:-1px; text-indent:17px;}
+#app-download_wrap .app-download_area .linked2 .ment .plus {font-size:24px; color:#565656;}
+#app-download_wrap .app-download_area .linked2 .my-phone-number {position:absolute; width:300px; height:58px; margin-top:55px; margin-left:16px; border:2px solid #bcbcbc; background:#fff; font-size:34px; text-indent:14px; line-height:58px; vertical-align:middle; letter-spacing:0;}
+#app-download_wrap .app-download_area .linked2 .btn_send {position:absolute; width:118px; height:64px; margin-top:55px; margin-left:330px; border:0; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_btn_send_def.png') no-repeat 0 0; background-size:118px 64px; color:#fff; letter-spacing:0; line-height:64px; vertical-align:middle;}
+#app-download_wrap .app-download_area .linked2 .btn_send:active {background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_btn_send_act.png') no-repeat 0 0;}
+
+/* FOOTER */
+#footer_wrap {position:absolute; top:2272px; left:0; width:100%; height:auto; margin:0; padding:0; background-color:#303233;}
+#footer_wrap .footer_area {display:inline-block; position:relative; left:50%; width:1280px; height:228px; margin-left:-640px; background-color:#303233;}
+#footer_wrap .footer_area .logo {display:inline-block; position:absolute; top:68px; left:42px; width:170px; height:70px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc/ad_pc_logo-on-footer.png') no-repeat 0 0; background-size:170px 70px;}
+#footer_wrap .footer_area .company {display:inline-block; position:absolute; top:50px; left:268px; width:380px; margin:0; padding:0; font-size:18px; color:#fff; line-height:18px; letter-spacing:0;}
+#footer_wrap .footer_area .company_detail_col1 {display:inline-block; position:absolute; top:84px; left:268px; width:380px; margin:0; padding:0; font-size:18px; color:#a7a7a7; line-height:28px;}
+#footer_wrap .footer_area .tel {display:inline-block; color:#a7a7a7; cursor:default;}
+#footer_wrap .footer_area .company_detail_col1 .color2 {color:#b2b2b2;}
+#footer_wrap .footer_area .ml24 {margin-left:24px;}
+#footer_wrap .footer_area .ml16 {margin-left:16px;}
+#footer_wrap .footer_area .company_detail_col2 {display:inline-block; position:absolute; top:84px; left:664px; width:380px; margin:0; padding:0; font-size:18px; color:#a7a7a7; line-height:28px;}
+#footer_wrap .footer_area .mail {display:inline-block; color:#a7a7a7;}
+#footer_wrap .footer_area .mail:hover,#footer_wrap .footer_area .company_detail_col2 .mail:active,#footer_wrap .footer_area .company_detail_col2 .mail:visited {color:#a7a7a7;}
+#footer_wrap .footer_area .copyright {display:inline-block; position:absolute; top:178px; left:268px; width:776px; margin:0; padding:0; font-size:16px; color:#888; letter-spacing:0; line-height:16px;}

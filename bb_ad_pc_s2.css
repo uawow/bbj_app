@@ -1,0 +1,80 @@
+@charset "utf-8";
+html {width:100%; height:100%; margin:0; padding:0; border:0; outline:0; background:transparent; color:#111; font-size:20px; font-family:'SpoqaHanSans-Regular'; vertical-align:baseline; letter-spacing:-0.5px;-webkit-text-size-adjust:100%; -webkit-overflow-scrolling:touch; -ms-text-size-adjust:100%;}
+body {overflow-x:hidden; width:100%; height:100%; margin:0; padding:0;}
+.font_t {font-family:"SpoqaHanSans-Thin";}
+.font_r {font-family:"SpoqaHanSans-Regular";}
+.font_b {font-family:"SpoqaHanSans-Bold";}
+a {display:block; margin:0; padding:0; background:transparent; color:inherit; font-size:100%; text-decoration:none; vertical-align:baseline; cursor:pointer; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+a:link,a:hover,a:active,a:visited {display:block; margin:0; padding:0; background:transparent; color:inherit; font-size:100%; text-decoration:none; vertical-align:baseline;}
+img {border:0; -ms-interpolation-mode:bicubic;}
+ul {margin:0; padding:0;}
+ul,li {list-style:none;}
+button,input {margin:0; font-size:1em; font-family:'SpoqaHanSans-Regular'; vertical-align:middle; appearance:none; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+input::-ms-clear {display:none;}
+button {overflow:visible; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); border:0; outline:0; text-transform:none;}
+button,html input[type="button"],input[type="submit"] {overflow:visible; vertical-align:middle; cursor:pointer; *-webkit-appearance:button;}
+button[disabled],html input[disabled] {cursor:default;}
+button::-moz-focus-inner,input::-moz-focus-inner {padding:0; border:0;}
+input {line-height:normal; outline:0;}
+#wrap {position:relative; top:0; left:0; right:0; width:100%; height:1286px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_background-view.jpg') repeat center; background-size:cover; background-attachment:fixed;}/*20170831 수정*/
+
+/* ON TOP */
+#on-top {position:absolute; overflow:hidden; top:0; left:0; width:100%; height:258px; animation-name:gradation; animation-duration:2s; animation-iteration-count:infinite; animation-direction:alternate; animation-timing-function:linear; background-color:#098cde;}
+@keyframes gradation {
+	from {background-color:#098cde;}
+	to {background-color:#097ad6;}
+}
+#on-top .element1 {position:relative; top:0; left:50%; width:870px; height:258px; margin-left:-435px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_element1-on-top.png') no-repeat; background-size:870px 258px;}
+#on-top .element1 .element2 {position:absolute; top:0; left:0; width:392px; height:214px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_element2-on-top_3.png') no-repeat; background-size:392px 214px;}
+#on-top .element1 .element3 {position:absolute; top:0; left:50%; width:298px; height:258px; margin-left:-149px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_element3-on-top.png') no-repeat; background-size:298px 258px;}
+
+/*******************************20170831 수정(정우아)***************************************/
+/* KEY SPEC */
+#key-spec_wrap {position:absolute; overflow:hidden; top:258px; left:0; width:100%; margin:0; padding:0; height:365px;; background-color:#fff;}
+#key-spec_wrap .key-spec_area {position:relative; top:0; width:1000px; height:auto; background-color:#fff; margin:40px auto; text-align:center;}
+#key-spec_wrap .key-spec_area:after{display:block; content:''; clear:both;}
+#key-spec_wrap .key-spec_area .spec1, .spec2, .spec3{width:324px; height:285px; float:left;}
+#key-spec_wrap .key-spec_area .spec1 {background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_keySpec1.jpg') no-repeat; background-size:324px 285px;}
+#key-spec_wrap .key-spec_area .spec2 {background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_keySpec2.jpg') no-repeat; background-size:324px 285px; margin:0 14px;}
+#key-spec_wrap .key-spec_area .spec3 {background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_keySpec4.jpg') no-repeat; background-size:324px 285px;}
+#key-spec_wrap .key-spec_area .ment-in {display:block; margin-top:187px;}
+#key-spec_wrap .key-spec_area .ment-in .head-ment {margin:0 18px 0 18px; font-size:26px; color:#010101; line-height:32px; text-align:right; letter-spacing:-2px; font-style:italic;}
+#key-spec_wrap .key-spec_area .ment-in .ment {margin:5px 17px 0 17px; font-size:16px; color:#111; line-height:26px; text-align:right; letter-spacing:-1px;}
+
+/* CATCHWORD */
+#catchword_wrap {position:absolute; overflow:hidden; top:620px; left:0; width:100%; height:auto; margin:0; padding:0;}
+#catchword_wrap .catchword_area {display:inline-block; position:relative; left:50%; width:100%; height:143px; margin-left:-50%;}
+#catchword_wrap .catchword_area .head-catchword {display:block; position:absolute; top:0; left:50%; width:620px; margin:25px 0 0 -310px; border-bottom:2px solid #fff; font-size:37px; color:#fff; line-height:50px; text-align:center; letter-spacing:0; text-shadow:4px 4px 4px rgba(0,0,0,.75);}
+#catchword_wrap .catchword_area .head-catchword .ml {margin-left:16px;}
+#catchword_wrap .catchword_area .catchword {display:block; position:absolute; top:0; left:50%; width:620px; margin:93px 0 0 -310px; font-size:25px; color:#fff; line-height:28px; text-align:center; letter-spacing:-1px; text-shadow:3px 3px 3px rgba(0,0,0,.75);}
+#catchword_wrap .catchword_area .catchword .ml {margin-left:15px;}
+
+/* APP DOWNLOAD */
+#app-download_wrap {position:absolute; overflow:hidden; top:766px; left:0; width:100%; height:auto; margin:0; padding:0; background-color:#eee;}
+#app-download_wrap .app-download_area {display:inline-block; position:relative; left:50%; width:100%; height:365px; margin-left:-435px; background-color:#eee;}
+#app-download_wrap .app-download_area .mock-ups {display:inline-block; position:absolute; top:13px; left:34px; width:464px; height:336px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_mock-ups.png') no-repeat 0 0; background-size:464px 336px;}
+#app-download_wrap .app-download_area .linked1 {display:inline-block; position:absolute; top:13px; left:497px; width:316px; height:235px;}
+#app-download_wrap .app-download_area .linked1 .ment {position:absolute; width:316px; margin-top:13px; padding:0; font-size:24px; text-align:center; letter-spacing:0; line-height:24px;}
+#app-download_wrap .app-download_area .linked1 .google {position:absolute; margin-top:54px; margin-left:11px; width:294px; height:79px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_btn_linked-GooglePlay.png') no-repeat 0 0; background-size:294px 79px;}
+#app-download_wrap .app-download_area .linked1 .apple {position:absolute; margin-top:144px; margin-left:11px; width:294px; height:79px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_btn_linked-AppStore.png') no-repeat 0 0; background-size:294px 79px;}
+#app-download_wrap .app-download_area .linked2 {display:inline-block; position:absolute; top:256px; left:497px; width:316px; height:91px;}
+#app-download_wrap .app-download_area .linked2 .ment {position:absolute; width:316px; margin-top:9px; padding:0; font-size:18px; line-height:18px; letter-spacing:-1px; text-indent:13px;}
+#app-download_wrap .app-download_area .linked2 .ment .plus {font-size:16px; color:#565656;}
+#app-download_wrap .app-download_area .linked2 .my-phone-number {position:absolute; width:203px; height:40px; margin-top:37px; margin-left:11px; border:2px solid #bcbcbc; background:#fff; font-size:24px; text-indent:9px; line-height:40px; vertical-align:middle; letter-spacing:0;}
+#app-download_wrap .app-download_area .linked2 .btn_send {position:absolute; width:80px; height:44px; margin-top:37px; margin-left:225px; border:0; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_btn_send_def.png') no-repeat 0 0; background-size:80px 44px; font-size:20px; color:#fff; letter-spacing:0; line-height:44px; vertical-align:middle;}
+#app-download_wrap .app-download_area .linked2 .btn_send:active {background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_btn_send_act.png') no-repeat 0 0;}
+
+/* FOOTER */
+#footer_wrap {position:absolute; overflow:hidden; top:1131px; left:0; width:100%; height:auto; margin:0; padding:0; background-color:#303233;}
+#footer_wrap .footer_area {display:inline-block; position:relative; left:50%; width:100%; height:155px; margin-left:-435px; background-color:#303233;}
+#footer_wrap .footer_area .logo {display:inline-block; position:absolute; top:46px; left:31px; width:116px; height:48px; background:url('http://image.bbjang.com/imgs/bbjang/img_ad_pc_s2/ad_pc_s2_logo-on-footer.png') no-repeat 0 0; background-size:116px 48px;}
+#footer_wrap .footer_area .company {display:inline-block; position:absolute; top:31px; left:184px; width:380px; margin:0; padding:0; font-size:16px; color:#fff; line-height:16px; letter-spacing:0;}
+#footer_wrap .footer_area .company_detail_col1 {display:inline-block; position:absolute; top:57px; left:184px; width:380px; margin:0; padding:0; font-size:16px; color:#a7a7a7; line-height:23px;}
+#footer_wrap .footer_area .company_detail_col1 .color2 {color:#b2b2b2;}
+#footer_wrap .footer_area .company_detail_col2 {display:inline-block; position:absolute; top:57px; left:478px; width:380px; margin:0; padding:0; font-size:16px; color:#a7a7a7; line-height:23px;}
+#footer_wrap .footer_area .company_detail_col2 .color2 {color:#b2b2b2;}
+#footer_wrap .footer_area .company_detail_col2 .tel {display:inline-block; color:#a7a7a7; cursor:default;}
+#footer_wrap .footer_area .company_detail_col2 .ml {margin-left:11px;}
+#footer_wrap .footer_area .company_detail_col2 .mail {display:inline-block; color:#a7a7a7;}
+#footer_wrap .footer_area .company_detail_col2 .mail:hover,#footer_wrap .footer_area .company_detail_col2 .mail:active,#footer_wrap .footer_area .company_detail_col2 .mail:visited {color:#a7a7a7;}
+#footer_wrap .footer_area .copyright {display:inline-block; position:absolute; top:118px; left:184px; width:776px; margin:0; padding:0; font-size:14px; color:#838383; letter-spacing:0; line-height:14px;}

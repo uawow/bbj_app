@@ -1,0 +1,367 @@
+@charset "utf-8";
+
+.pd_45{padding-top:45px;}
+.btn_back{width:44px!important;}
+.wrap_location_map{position:fixed; width:100%; height:100%; padding-top:45px; box-sizing:border-box;}
+.fix1{position:relative; width:100%; height:100%;}
+#map { position:fixed; width:100%; left:0; right:0; bottom:0; } /* 맵고정 픽스 */
+.map_fix{top:82px;}
+.pop_center{position:fixed; top:50%; height:auto; overflow:hidden; background-color:#fff; transform:translate(0,-50%); -webkit-transform:translate(0,-50%); box-shadow:1px 1px 20px #3c3c3c;}
+.bg_pop_modal{position:fixed; width:100%; height:100%; background:rgba(0,0,0,0.6);}
+.hd_adrs{display:-webkit-box; width:87%!important; overflow:hidden; text-overflow:ellipsis; word-wrap:break-word; -webkit-box-orient:vertical; -webkit-line-clamp:1;}
+
+/* 레이어창 스크롤 */
+.style_2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2) !important;
+	border-radius: 4px !important;
+	background-color: #F5F5F5 !important;
+}
+
+.style_2::-webkit-scrollbar
+{
+	width: 5px !important;
+	background-color: #F5F5F5 !important;
+	-webkit-appearance: none !important;
+}
+
+.style_2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px !important;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3) !important;
+	background-color: #4d6080  !important;
+}
+.style_2::-webkit-scrollbar-thumb:window-inactive {
+   background: #4d6080  !important;
+ }
+
+
+.view_btn_ripple{position:fixed; width:auto; height:46px; bottom:20px; right:20px; z-index:2; padding:0 52px 0 112px; border-radius:23px; border:1px solid rgba(255, 144, 0, 0.4); box-sizing:border-box; background:transparent; opacity:0;}
+@keyframes rippling {
+    25% {transform: scale(1,1.2); opacity: 1;}
+    100% {transform: scale(1.2,1.4); opacity: 0;}
+}
+.btn_view_list:active .view_btn_ripple{animation:rippling 0.25s linear 1; -webkit-animation:rippling 0.25s linear 1; -ms-animation:rippling 0.25s linear 1; -moz-animation:rippling 0.25s linear 1; -o-animation:rippling 0.25s linear 1;}
+
+
+/************************ HEADER ************************/
+/*헤더 주소검색영역 */
+.box_srch{position:relative; width:100%; height:100%; padding:0 46px 0 44px; box-sizing:border-box;}
+.box_srch .srch_adrs{position:relative; width:100%; height:auto; top:5px; padding:10px 60px 9px 14px; box-sizing:border-box; border-radius:3px; background:rgba(0,0,0,0.16);}
+.box_srch .srch_adrs input{position:relative; width:100%; height:auto; background:none; border:none; font-size:15px; line-height:15px; letter-spacing:-0.5px; font-weight:700; color:#fff; outline:none; appearance:none; -webkit-appearance:none;}
+.box_srch .srch_adrs input::-webkit-input-placeholder{color:#fff; font-weight:normal; line-height:16px; letter-spacing:-0.5px;}
+.box_srch .btn_srch{position:absolute; width:36px; height:36px; top:0; right:0;}
+.box_srch .btn_srch a{display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_srch_loca.png") no-repeat center center; background-size:22px 20px;}
+.box_srch .btn_srch a:active{background-color:rgba(0,0,0,0.07);}
+.box_srch .btn_erase{position:absolute; width:24px; height:36px; top:0; right:36px;}
+.box_srch .btn_erase a{display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_txt_erase.png") no-repeat center center; background-size:11px 11px;}
+.box_srch .btn_erase a:active{background-color:rgba(0,0,0,0.07);}
+/* 헤더 오른쪽버튼영역 */
+.btn_right{position:absolute; width:36px; height:36px; top:5px; right:5px; border-radius:3px; background-color:rgba(0,0,0,0.16);}
+.btn_right a{display:block; width:100%; height:100%;}
+.btn_right a.btn_my_loca{background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_my_loca.png") no-repeat center center; background-size:19px 19px;} /* 내위치 */
+.btn_right a.btn_return_map{background:url("http://image.bbjang.com/imgs/bbjang/img_map/ico_map2.png") no-repeat center 6px; background-size:17px 23px;} /* 지도돌아가기 */
+.btn_right a:active{background-color:rgba(0,0,0,0.07);}
+
+/************************ FILTER ************************/
+.fltr_map{position:fixed; width:100%; height:auto; top:45px; background:#fff; overflow:auto; border-bottom:1px solid #c1c1c1; z-index:100;}
+.fltr_map li{float:left; width:25%; height:auto; border-right:1px solid #e1e1e1; box-sizing:border-box;}
+.fltr_map li.fltr_region a{display:block; width:100%; height:auto; padding:10px 20% 10px 10%; box-sizing:border-box; background:url("http://image.bbjang.com/imgs/bbjang/img_map/bullet_slct.png") no-repeat 90% center; background-size:10px 7px; font-size:14px; font-weight:700; color:#384955;}
+.fltr_map li.fltr_region a:active{background-color:rgba(0,0,0,0.03);}
+.fltr_map li.fltr_region a span{display:-webkit-box; overflow:hidden; text-overflow:ellipsis; -webkit-box-orient:vertical; -webkit-line-clamp:1;}
+.fltr_map li.fltr_srch_more{border:none;}
+.fltr_map li.fltr_srch_more a{display:block; width:100%; height:auto; font-size:14px; font-weight:700; color:#0882c0; line-height:36px; text-align:center;}
+.fltr_map li.fltr_srch_more a:active{background-color:rgba(0,0,0,0.03);}
+.fltr_map li.fltr_srch_more a span{padding-left:19px; background:url("http://image.bbjang.com/imgs/bbjang/img_map/ico_fltr.png") no-repeat left top; background-size:15px 14px;}
+
+/************************ MAP ************************/ 
+/* 커스텀오버레이 */
+.customoverlay{position:relative; width:auto; right:0px; bottom:0px; z-index:100;}
+.customoverlay a{display:block; width:100%; height:100%; padding:8px 18px 6px 18px; box-sizing:border-box; background-color:rgba(0,101,242,0.8); 
+box-shadow:1px 1px 4px rgba(9, 36, 74, 0.6); font-size:18px; line-height:18px; color:#fff; font-weight:700; text-align:center; overflow:hidden; border-top-left-radius:100%; border-top-right-radius:50%; border-bottom-right-radius:100%; border-bottom-left-radius:50%;}
+.customoverlay a.min_wd{width:56px; padding:7px 0px 5px 0;}
+/*
+.customoverlay a:active{padding:8px 22px 6px 22px; border:4px solid rgba(0,101,242,0.78); background-color:#fff; color:#0065f2;}
+.customoverlay a.min_wd:active{width:70px; padding:9px 0px 7px 0;}*/
+.co_active a{width:82px!important; padding:8px 0 6px 0!important; border:4px solid rgba(0,101,242,0.78); background-color:#fff; color:#0065f2;}
+.co_active a.min_wd{width:70px!important; padding:7px 0px 5px 0!important;}
+
+/* 줌인아웃버튼 */
+.zoom_control{position:fixed; top:128px; right:7px; width:32px; height:64px; overflow:hidden; background-color:#fff; border:1px solid #bbb; border-radius:3px; z-index:2;}
+.zoom_control span{display:block; width:32px; height:32px; cursor:pointer;}
+.zoom_control span:first-child{border-bottom:1px solid #bbb; background:url("http://image.bbjang.com/imgs/bbjang/img_map/ico_zoom_in.png") no-repeat center center; background-size:17px 17px;}
+.zoom_control span:last-child{background:url("http://image.bbjang.com/imgs/bbjang/img_map/ico_zoom_out.png") no-repeat center center; background-size:17px 3px;}
+/* 매물리스트버튼 */
+.btn_view_list{position:fixed; width:auto; height:36px;  bottom:16px; right:16px; z-index:2;}
+.btn_view_list a{padding:0 34px 0 20px; border-radius:23px; background:#ff9000 url("http://image.bbjang.com/imgs/bbjang/img_map/bullet_r_arrow.png") no-repeat 90% center; background-size:9px 16px; box-shadow:1px 1px 6px rgba(0, 0, 0, 0.21); font-size:16px; font-weight:700; line-height:36px; color:#fff; text-align:center;}
+.btn_view_list a:active{position:relative; top:1px;}
+
+/************************ 매물리스트 레이어창 ************************/ 
+.slct_lst{display:none; position:fixed; width:100%; height:auto; bottom:0; z-index:10; overflow:hidden;}
+/* 매물리스트헤더 */
+.slct_lst .lst_top{position:relative; width:100%; height:auto; line-height:34px; background:#3e506d; font-size:16px; font-weight:700; color:#fff; text-align:center;}
+.slct_lst .lst_top span.lst_count{color:#c7e7f9; padding-left:6px; padding-right:5px;}
+.slct_lst .lst_top .btn_lst_dlt{position:absolute; width:32px; height:32px; top:0; right:0;}
+.slct_lst .lst_top .btn_lst_dlt a{display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_layer_dlt2.png") no-repeat center center; background-size:17px 17px;}
+.slct_lst li.lst_top .btn_lst_dlt a:active{background-color:rgba(0,0,0,0.05);}
+/* 매물리스트 레이어스타일 설정 */
+.slct_lst ul{position:relative; width:100%; background:#e1e7ea; overflow-x:hidden; overflow-y:auto;}
+.slct_lst ul.lst_contents{height:190px;}
+.slct_lst ul.lst_two{height:190px;} /* 리스트2개 */
+.slct_lst ul.lst_one{height:95px; overflow-y:hidden;} /* 리스트1개 */
+
+
+/************************ 해당영역 매물리스트 페이지 ************************/ 
+/* 리스트정렬필터 */
+.result_wrap{position:relative; width:100%; height:30px; border-bottom:1px solid #c9c9c9; background-color:#f5f5f5}
+.result_wrap .align_wrap{position:relative; float:left; width:90px; height:22px; margin:3px 0 3px 5px; background-color:#fff; border-radius:3px; border:1px solid #9a9fa1; overflow:hidden;}
+.result_wrap .align_wrap select{position:relative; display:block; width:100%; height:22px; padding-left:5px; border-radius:3px; box-sizing:border-box; font-size:14px; color:#4d5356; border:none; outline:none; background:#fff url(http://image.bbjang.com/imgs/bbjang/img01/ico_slct_drop02.png) no-repeat 95% center; background-size:10px 6px;}
+/* 매물건수 */
+.result_wrap .result_container{position:relative; float:right; width:auto; height:100%; right:10px;}
+.result_wrap .result_container:after{content:""; display:block; clear:both;}
+.result_wrap .result_container div{position:relative; float:left;}
+.result_wrap .result_container .result_txt{width:auto; height:100%; line-height:30px;}
+/* 리스트 */
+.slct_lst_fullpage{position:relative; width:100%; height:auto; background:#e1e7ea;}
+/* 검색 결과 없음 */
+.list_none{position:relative; width:1,00%; height:auto; background:#fff;}
+.list_none .list_none_row1{padding-top:88px; text-align:center;}
+.list_none .list_none_row2{padding-top:10px; color:#a1a3a6; font-size:15px; text-align:center;}
+
+/************************ 장소주소 검색결과 레이어창 ************************/
+.wrap_srch_lst{display:none; position:fixed; width:100%; top:45px; bottom:0; left:0; right:0; overflow:auto; background:#fff; z-index:200;}
+.wrap_srch_lst .srch_top{position:fixed; width:100%; height:30px; background:#fff; border-bottom:2px solid #85d0f6; padding-left:18px; box-sizing:border-box; font-size:13px; font-weight:700; color:#61b2db; line-height:30px; z-index:100;}
+.wrap_srch_lst .srch_cls{position:absolute; width:50px; height:30px; top:0; right:0;}
+.wrap_srch_lst .srch_cls a{display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_srch_lst_dlt.png") no-repeat center center; background-size:15px 15px;}
+.wrap_srch_lst .srch_cls a:active{background-color:rgba(0,0,0,0.03);}
+/* 리스트 */
+.wrap_srch_lst .srch_content{position:fixed; height:auto; top:75px; bottom:40px; left:0; right:0; overflow-y:scroll;}
+.wrap_srch_lst .srch_content ul.srch_list1{position:relative; height:auto;}
+.wrap_srch_lst .srch_content li{float:left; position:relative; width:100%; padding:12px 70px 11px 18px; border-bottom:1px solid #d8deea; box-sizing:border-box; cursor:pointer;}
+.wrap_srch_lst .srch_content li:active{background:rgba(0,0,0,0.03);}
+.wrap_srch_lst .srch_content li span.main_loca{display:block; font-size:16px; font-weight:700; color:#384955; line-height:16px;}
+.wrap_srch_lst .srch_content li span.sub_loca{display:block; padding-top:8px; font-size:14px; font-weight:400; color:#616161; line-height:14px;}
+.wrap_srch_lst .srch_content li span.srch_color{color:#0ca2ed;}
+.wrap_srch_lst .srch_content li .btn_lst_slct{position:absolute; width:48px; height:auto; top:50%; right:18px; margin-top:-16px}
+.wrap_srch_lst .srch_content li .btn_lst_slct a{display:block; width:100%; height:100%; background:#fff; border:1px solid #0ca2ed; box-sizing:border-box; border-radius:3px; font-size:14px; color:#0ca2ed; line-height:30px; text-align:center;}
+.wrap_srch_lst .srch_content li .btn_lst_slct a:active{position:relative; top:1px;}
+/* 하단 결과더보기 버튼 */
+.wrap_srch_lst .srch_more_btn{position:fixed; width:100%; bottom:0px; text-align:center;}
+.wrap_srch_lst .srch_more_btn a{display:block; width:100%; height:auto; padding:13px 0; font-size:14px; color:#fff; line-height:14px;}
+.wrap_srch_lst .srch_lst_more a{background:#b2b8bb;}
+.wrap_srch_lst .srch_lst_more a:active{background:#a5acaf;}
+.wrap_srch_lst .more_disable{background:#e1e4e6;}
+
+/*-------------- 170919 선택매물 레이어창 애니메이션추가(김다솜) --------------*/
+.ani_h_up{height:284px!important; animation:scr_h_up 0.4s linear;}
+.ani_h_dn{height:190px!important; animation:scr_h_dn 0.4s linear;}
+@keyframes scr_h_up {
+    0% {height:190px;}
+    100% {height:284px;}
+}
+@keyframes scr_h_dn {
+    0% {height:284px;}
+    100% {height:190px;}
+}
+
+/* 171102 광고등록버튼추가 */
+.btn_set_ad3{position:absolute; width:100px; height:30px; top:90px; right:7px;}
+.btn_set_ad3 a{display:block; width:100%; height:100%; background:#f15a5a; border-radius:3px; font-size:15px; font-weight:700; color:#fff; letter-spacing:-0.5px; text-align:center; line-height:32px;}
+
+
+/*--------171103 card_photo 메인 적용 css 무효화 추가 (정우아)-------------
+/************************ 매물리스트 공통레이아웃 ***********************
+.lst_card{position:relative; width:100%; height:auto; padding-top:3px;}
+.card_ad_next{padding-top:0;}
+/* 사진영역 
+.card_photo{position:absolute; top:4px; left:0; z-index:10;  width:110px; height:90px; padding-top:0; transform:none;}/*171103 추가
+.card_photo img{position:relative; display:block; width:100%; height:100%; object-fit: cover;}
+.card_photo .sold_out02{background:url(http://image.bbjang.com/imgs/bbjang/img01/list_sold_out02.png) no-repeat center center; background-size:cover;}
+.card_photo .expira02{background:url(http://image.bbjang.com/imgs/bbjang/img01/list_expira02.png) no-repeat center center; background-size:cover;}
+.card_photo a img{position:relative; z-index:-1; width:100%; height:100%;}
+.card_content{position:relative; width:100%; height:92px; padding:4px 10px 4px 120px; box-sizing:border-box; border-top:1px solid #cad1d4; border-bottom:1px solid #cad1d4; background-color:#fff;}
+.card_content:active{background-color:#f3f3f3;}
+.card_content a{display:block; position:relative; width:100%; height:100%;}
+/* 매물정보영역 
+.card_title{width:100%; height:auto; line-height:17px; font-size:15px; color:#000;display:block;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis; }
+.card_title .main_badge_month, .card_title .main_badge_rent, .card_title .main_badge_sale, .card_title .main_badge_short, .card_title .main_badge_buy{display:inline-block; width:auto; padding:0 5px; height:16px; line-height:17px; border-radius:2px; font-weight:400; font-family:"SpoqaHanSans-Bold"; font-size:12px; color:#fff; text-align:center; vertical-align:top; margin-right:2px;}
+.card_title .main_badge_month{background-color:#33a381;}
+.card_title .main_badge_rent{background-color:#92982a;}
+.card_title .main_badge_sale{background-color:#267ba2;}
+.card_title .main_badge_short{background-color:#d77327;}
+.card_title .main_badge_buy{background-color:#70369d;}
+.card_title .area_span{padding-left:12px; background:url(http://image.bbjang.com/imgs/bbjang/img01/bg_bar05.png) no-repeat 5px 2px; background-size:1px 10px;}
+.card_info{display:inline-block; height:15px; line-height:16px; font-size:12px; color:#1c1e1f; overflow:hidden;}
+.card_info .area_span{line-height:19px;}
+.card_info_buy{width:100%; height:15px; line-height:16px; font-size:12px; color:#1c1e1f; padding-top:1px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.card_price{ display:inline;width:100%; height:17px; line-height:18px; font-size:15px; color:#004c80; padding-top:2px; font-weight:400; font-family:"SpoqaHanSans-Bold"; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.card_txt{position:absolute; width:100%; height:30px; bottom:0; line-height:16px; font-size:13px; padding-top:1px; display:-webkit-box; overflow:hidden; text-overflow:ellipsis; word-wrap:break-word; -webkit-box-orient:vertical; -webkit-line-clamp:2; white-space:normal;}
+.card_txt2{width:100%; height:15px; bottom:0; line-height:16px; font-size:13px; padding-top:1px; display:-webkit-box; overflow:hidden; text-overflow:ellipsis; word-wrap:break-word; -webkit-box-orient:vertical; -webkit-line-clamp:1; white-space:normal;}
+/* 메인 글작성날짜 뱃지
+.card_content .wt_day, .card_content .wt_nday{float:right; font-size:13px; font-weight:700; text-align:center; width:35px; height:14px; line-height:15px; border-top-left-radius:100%; border-top-right-radius:50%; border-bottom-right-radius:100%; border-bottom-left-radius:50%;}
+.card_content .wt_day{background-color:#c57387; color:#fff;}
+.card_content .wt_nday{background-color:#7d7375; color:#fff;}
+ */
+
+/*---------------------------- 171130  타지역 상권분석 (이규호) ----------------------------*/
+.zoom_control.css2 {top:90px;}
+.fltr_map li.css2 {width:33.33%;}
+.fltr_map li.css3 {border-right:0;}
+
+/* 지도위 검색바 */
+.box_srch_2 {position:fixed; z-index:10; top:86px; width:100%; padding:0 45% 0 10px; box-sizing:border-box;}
+.box_srch_2 .srch_adrs_2 {position:relative; top:5px; width:100%; height:auto; padding:10px 68px 9px 14px; -webkit-border-radius:18px; border-radius:18px; box-shadow:0 1px 4px rgba(8,107,156,1) inset; background-color:rgba(10,137,200,1); box-sizing:border-box;}
+.box_srch_2 .srch_adrs_2 input {position:relative; width:100%; height:auto; background:none; border:none; font-size:15px; line-height:15px; letter-spacing:-0.5px; font-weight:700; color:#fff; outline:none; appearance:none; -webkit-appearance:none;}
+.box_srch_2 .srch_adrs_2 input::-webkit-input-placeholder {color:#fff; font-weight:normal; line-height:16px; letter-spacing:-0.5px;}
+.box_srch_2 .btn_srch_2 {position:absolute; width:41px; height:36px; top:0; right:0;}
+.box_srch_2 .btn_srch_2 a {display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_srch_loca.png") no-repeat 33% center; background-size:22px 20px;}
+.box_srch_2 .btn_srch_2 a:active {-webkit-border-radius:0 18px 18px 0; border-radius:0 18px 18px 0; background-color:rgba(0,0,0,0.07);}
+.box_srch_2 .btn_erase_2 {position:absolute; width:24px; height:36px; top:0; right:42px;}
+.box_srch_2 .btn_erase_2 a {display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_txt_erase.png") no-repeat center center; background-size:11px 11px;}
+.box_srch_2 .btn_erase_2 a:active {background-color:rgba(0,0,0,0.07);}
+
+/* 반경 세팅 */
+.bounds_sett {position:fixed; overflow:hidden; z-index:10; bottom:0; width:100%; height:48px; -webkit-box-shadow:0 -1px 7px rgba(0,0,0,.2); box-shadow:0 -1px 7px rgba(0,0,0,.2); background-color:rgba(255,255,255,1);}
+.bounds_sett .lb {display:inline-block; position:absolute; top:0; left:0; width:111px; height:48px; font-size:15.5px; color:#384955; line-height:48px; text-indent:10px; letter-spacing:-1px; white-space:nowrap;}
+.bounds_sett .slct_area {display:inline-block; position:absolute; top:0; left:112px; width:92px; height:48px;}
+.bounds_sett .line {display:inline-block; position:absolute; top:50%; width:1px; height:20px; margin:-10px 0 0 0; background-color:#d9d9d9;}
+.bounds_sett .line.l {left:111px;}
+.bounds_sett .line.r {left:204px;}
+.bounds_sett .slct_area .slct {width:100%; height:100%; padding:0 0 0 9px; border:none; outline:none; background:#fff url('http://image.bbjang.com/imgs/bbjang/img_map/place/slct_arrow_blue.png') no-repeat 88%; background-size:12px 8px; font-size:16px; color:#0069bf; letter-spacing:0;}
+.bounds_sett .confirm {position:absolute; top:50%; right:14px; width:102px; height:36px; margin:-18px 0 0 0; -webkit-border-radius:18px; border-radius:18px; background-color:#0072cf; font-size:15.5px; color:#fff; line-height:36px; text-align:center;}
+.bounds_sett .confirm:active {background-color:#0064b5;}
+@media all and (max-width:359px){
+.bounds_sett .lb {width:104px; font-size:15px;}
+.bounds_sett .slct_area {left:105px; width:88px;}
+.bounds_sett .slct_area .slct {font-size:15.5px;}
+.bounds_sett .line.l {left:104px;}
+.bounds_sett .line.r {left:193px;}
+.bounds_sett .confirm {right:11px; width:92px;}
+}
+@media all and (min-width:412px){
+.bounds_sett .lb {left:5px;}
+.bounds_sett .slct_area {left:117px; width:107px;}
+.bounds_sett .line.l {left:116px;}
+.bounds_sett .line.r {left:224px;}
+.bounds_sett .confirm {width:108px;}
+}
+@media all and (min-width:768px){
+.bounds_sett .lb {left:20px; width:121px;}
+.bounds_sett .slct_area {left:142px; width:137px;}
+.bounds_sett .line.l {left:141px;}
+.bounds_sett .line.r {left:279px;}
+.bounds_sett .confirm {right:18px; width:118px;}
+}
+/*----------------------------------------------------------------------------------------*/
+
+/* 171226  주변편의시설보기 지도- 하단 다음로고 보이게 수정 */
+.fix1.size2 {margin:0 0 92px 0;}
+
+/* 180130  유동인구 측정지점 위치보기- 확대축소버튼 좌표 추가, 로드뷰 버튼 추가 (이규호) */
+.zoom_control.css3 {top:54px;}
+.zoom_control.css4 {top:91px;}
+.btn_set_roadview {position:absolute; z-index:10; width:98px; height:28px; top:53px; right:8px;}
+.btn_set_roadview a {display:block; width:100%; height:100%; background:#13a2eb; border:1px solid #158ecb; border-radius:3px; font-size:15px; font-weight:700; color:#fff; letter-spacing:-0.5px; text-align:center; line-height:30px;}
+.btn_set_roadview a:active {background:#1596d6;}
+.btn_set_roadview .icon {display:inline-block; position:relative; top:4px; width:14px; height:20px; margin:0 5px 0-5px; background:url('http://image.bbjang.com/imgs/bbjang/img_map/btn_set_roadview_ico.png') no-repeat center; background-size:14px 20px;}
+
+/* 180207  유동인구 측정지점 위치보기- 주소레이어 css추가 ( .ydingu_minilayer_2 ) */
+.ydingu_minilayer {display:block; position:relative; z-index:10; width:100%; height:28px; margin:-90px 0 0 0; text-align:center;}
+.ydingu_minilayer_2 {display:block; position:relative; z-index:10; width:100%; height:28px; margin:-76px 0 0 -8px; text-align:center;}
+.ydingu_minilayer .addr,.ydingu_minilayer_2 .addr {display:inline-block; position:relative; overflow:hidden; width:auto; height:28px; padding:0 7px; -webkit-border-radius:3px; border-radius:3px; background-color:#003e94; font-size:13.5px; color:#fff; line-height:28px; text-align:center; letter-spacing:-0.3px;}
+.ydingu_minilayer .x,.ydingu_minilayer_2 .x {position:relative; z-index:30; right:0; width:18px; height:28px; margin:0 0 0 6px; border:none; outline:0; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl_pin_mnlyr_x.png') no-repeat center; background-size:18px 18px; color:rgba(0,0,0,0);}
+
+/* 180326  관심지역추가 버튼 추가 위성노 */
+.btn_add_myloca {position: fixed; width: 50px; height: 50px; bottom:70px; right:16px; z-index: 2; background-color: #0ca2ed; border-radius: 50%; box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.21);}
+.btn_add_myloca a {width: 100%; height: 100%; text-indent: -9999px; background: url(http://image.bbjang.com/imgs/bbjang/img_map/ico_add_myloca.png) center no-repeat; background-size:29.5px 33px;}
+.btn_add_myloca:active {background-color:#0b99e0;}
+
+
+/*------------------------------ 로드뷰, 주변편의시설, 지적편집도 (이규호) ------------------------------*/
+/*-------- 180205 오른쪽하단 주변정보 On Off- 장소 카테고리 9종 추가 --------*/
+/*-------- 180316 플로팅 네비게이션버튼- 버튼3개타입 추가 --------*/
+/*-------- 180326 네비게이션UI관련 수정 (기존 '플로팅 네비게이션버튼 css'제거됨) --------*/
+/*-------- 180327 네비게이션UI관련 수정- 길찾기 제공안되는 유형 css 추가 --------*/
+/*-------- 180402 주변시설- 큰동그라미 아이콘사이즈 수정 --------*/
+
+/* 네비게이션 */
+.navis {position:relative; z-index:60; height:48px; -webkit-box-shadow:0 0 5px rgba(0,0,0,.45); box-shadow:0 0 5px rgba(0,0,0,.45); background-color:#fff;}
+.navis.boxshadow_none {-webkit-box-shadow:0 0 5px rgba(0,0,0,.45); box-shadow:none;}
+.navis .btns_area {position:relative; top:0; height:48px; margin:0 9px;}
+.navis .btns_area .col4_1 {display:inline-block; position:absolute; top:0; width:25%;}
+.navis .btns_area .col4_2 {display:inline-block; position:absolute; top:0; left:25%; width:25%;}
+.navis .btns_area .col4_3 {display:inline-block; position:absolute; top:0; left:50%; width:25%;}
+.navis .btns_area .col4_4 {display:inline-block; position:absolute; top:0; left:75%; width:25%;}
+.navis .btns_area .col3_1 {display:inline-block; position:absolute; top:0; width:33.3%;}
+.navis .btns_area .col3_2 {display:inline-block; position:absolute; top:0; left:33.3%; width:33.3%;}
+.navis .btns_area .col3_3 {display:inline-block; position:absolute; top:0; left:66.6%; width:33.3%;}
+.navis .btns_area .btn {position:relative; top:8px; height:30px; margin:0 4px; border:1px solid #999; -webkit-border-radius:4px; border-radius:4px; background-image:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#f2f2f2));background-image:-moz-linear-gradient(top,#fff,#f2f2f2);background-image:-o-linear-gradient(top,#fff,#f2f2f2);background-image:linear-gradient(to bottom,#fff,#f2f2f2); color:#595959; font-size:13px; text-align:center; line-height:32px;}
+.navis .btns_area .btn.on {position:relative; top:8px; height:30px; margin:0 4px; border:1px solid #005cde; -webkit-border-radius:4px; border-radius:4px; background-image:-webkit-gradient(linear,left top,left bottom,from(#005cde),to(#005cde));background-image:-moz-linear-gradient(top,#005cde,#005cde);background-image:-o-linear-gradient(top,#005cde,#005cde);background-image:linear-gradient(to bottom,#005cde,#005cde); font-size:13px; color:#fff; text-align:center; line-height:32px;}
+.navis .btns_area .btn .ico_roadview {display:inline-block; position:absolute; top:2px; left:50%; width:25px; height:25px; margin:0 20px 0 -32px; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/nav_ico_roadview.png') no-repeat 0 0; background-size:25px;}
+.navis .btns_area .btn .ico_map {display:inline-block; position:absolute; top:2px; left:50%; width:25px; height:25px; margin:0 0 0 -30px; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/nav_ico_map.png') no-repeat 0 0; background-size:25px;}
+.navis .btns_area .btn .ico_land-regi {display:inline-block; position:absolute; top:2px; left:50%; width:25px; height:25px; margin:0 0 0 -32px; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/nav_ico_land-regi.png') no-repeat 0 0; background-size:25px;}
+.navis .btns_area .btn .ico_path {display:inline-block; position:absolute; top:2px; left:50%; width:25px; height:25px; margin:0 0 0 -32px; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/nav_ico_path.png') no-repeat 0 0; background-size:25px;}
+.navis .btns_area .btn .ico_surround {display:inline-block; position:absolute; top:2px; left:50%; width:25px; height:25px; margin:0 0 0 -36px; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/nav_ico_surround.png') no-repeat 0 0; background-size:25px;}
+.navis .btns_area .btn.on .ico_surround {display:inline-block; position:absolute; top:2px; left:50%; width:25px; height:25px; margin:0 0 0 -36px; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/nav_ico_surround_on.png') no-repeat 0 0; background-size:25px;}
+.navis .btns_area .margin1 {margin:0 0 0 20px;}
+.navis .btns_area .margin2 {margin:0 0 0 17px;}
+@media all and (max-width:359px){
+.navis .btns_area {margin:0 6px;}
+.navis .btns_area .btn {margin:0 3px; font-size:12.5px;}
+}
+
+/* 주변시설 On Off */
+.place_btnsarea_r-bottom {position:absolute; z-index:50; bottom:0; width:100%; height:auto;}
+.place_btnsarea_r-bottom .near {position:relative; left:100%; width:82px; height:37px; margin:0 0 7px -88px; -webkit-border-radius:6px; border-radius:6px; -webkit-box-shadow:0 0 1px rgba(0,0,0,1); box-shadow:0 0 1px rgba(0,0,0,1); background:#fff url('http://image.bbjang.com/imgs/bbjang/img_map/place/ico_near.png') no-repeat 0 0; background-size:cover; color:rgba(0,0,0,0);}
+.place_btnsarea_r-bottom .near.on {-webkit-box-shadow:0 0 0 1px rgba(0,92,222,1); box-shadow:0 0 0 1px rgba(0,92,222,1); background:#005cde url('http://image.bbjang.com/imgs/bbjang/img_map/place/ico_near_on.png') no-repeat 0 0; background-size:cover;}
+.place_btnsarea_r-bottom .places {position:relative; left:0; bottom:0; width:100%; height:80px; border-bottom:1px solid #e6e6e6; -webkit-box-shadow:0 0 5px rgba(0,0,0,.45); box-shadow:0 0 5px rgba(0,0,0,.45); background:#f0f0f0;}
+.place_btnsarea_r-bottom .places .in {position:relative; overflow-y:hidden; width:100%; height:83px; padding:0 30px 0 12px; white-space:nowrap; box-sizing:border-box;}
+.place_btnsarea_r-bottom .places .in .pl {display:inline-block; position:relative; top:-3px; width:57px; height:100%;}
+.place_btnsarea_r-bottom .places .in .pl .t {position:absolute; top:64px; width:100%; font-size:12.5px; color:#333; text-align:center; white-space:nowrap;}
+.place_btnsarea_r-bottom .places .in .pl .choice {display:inline-block; position:absolute; top:0; left:50%; width:49px; height:49px; margin:10px 0 0 -25px; border:1px solid #b2b2b2; -webkit-border-radius:50%; border-radius:50%; background-repeat:no-repeat; background-position:left top; background-size:cover; box-sizing:border-box;}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl17 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl17_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl17.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl17_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl18 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl18_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl18.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl18_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl09 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl09_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl09.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl09_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl08 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl08_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl08.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl08_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl04 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl04_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl04.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl04_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl03 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl03_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl03.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl03_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl05 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl05_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl05.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl05_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl12 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl12_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl12.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl12_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl01 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl01_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl01.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl01_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl02 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl02_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl02.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl02_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl15 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl15_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl15.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl15_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl16 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl16_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl16.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl16_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl14 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl14_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl14.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl14_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl10 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl10_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl10.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl10_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl13 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl13_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl13.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl13_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl06 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl06_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl06.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl06_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl07 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl07_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl07.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl07_choice.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl11 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl11_choice_off.png');}
+.place_btnsarea_r-bottom .places .in .pl .choice.pl11.on {border:none; background-image:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl11_choice.png');}
+
+/* 장소간단정보 미니레이어 */
+.mnlyr {display:inline-block; position:absolute; z-index:20; width:160px; height:79px; margin:-108px 0 0 -80px; -webkit-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 2px 4px rgba(0,0,0,.5); box-shadow:0 2px 4px rgba(0,0,0,.5); background-color:#fff;}
+.mnlyr .titbar {display:block; position:relative; height:28px; -webkit-border-radius:4px 4px 0 0; border-radius:4px 4px 0 0; background-color:#0a1c40;}
+.mnlyr .titbar .title {position:absolute; overflow:hidden; width:125px; height:28px; margin:0 0 0 6px; color:#fff; line-height:28px; font-size:13.5px; text-overflow:ellipsis; white-space:nowrap;}
+.mnlyr .titbar .x {position:absolute; right:0; width:28px; height:28px; border:none; outline:0; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl_pin_mnlyr_x.png') no-repeat center; background-size:18px 18px; color:rgba(0,0,0,0);}
+.mnlyr .i-key {display:block; overflow:hidden; position:relative; height:auto; margin:6px 6px 0 6px; font-size:14px; line-height:20px; text-align:left; text-overflow:ellipsis; white-space:nowrap;}
+.mnlyr .i-key .call {font-size:13px; color:#0079bf;}
+.mnlyr .tail {display:inline-block; position:absolute; left:50%; bottom:-16px; width:26px; height:16px; margin:0 0 0 -13px; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl_pin_mnlyr_tail.png') no-repeat 0 0; background-size:cover;}
+/*--------------------------------------------------------------------------------------------------------------*/
